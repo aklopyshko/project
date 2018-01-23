@@ -1,18 +1,18 @@
 package ru.bstu.iitus.vt41.project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+
 import org.hibernate.annotations.GenericGenerator;
 @Getter
 @Setter
 @Entity
-@Table(name="User")
+@Table(name="user")
 public class User {
     @Id
     @Column(name="id")
@@ -26,6 +26,9 @@ public class User {
     @Column(name="role")
     private String role;
     //текушие ставки (Set)
+    @OneToMany(fetch =FetchType.EAGER,  mappedBy = "user")
+    @JsonIgnore
+    private List<Property> properties;
     //@Column(name="currentBets")
     //private long[] bets;
 }

@@ -1,5 +1,6 @@
 package ru.bstu.iitus.vt41.project.service.impl;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.bstu.iitus.vt41.project.entity.Property;
 import ru.bstu.iitus.vt41.project.repository.PropertyRepository;
@@ -27,4 +28,6 @@ public class PropertyServiceImpl implements PropertyService{
 
     @Override
     public List<Property> findAll() {return propertyRepository.findAll();}
+
+    public List<Property> findAll(Sort name){ return null;}
 }

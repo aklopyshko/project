@@ -2,10 +2,8 @@ package ru.bstu.iitus.vt41.project.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 import java.sql.Time;
 
 @Entity
@@ -18,8 +16,9 @@ public class Property {
     private long id;
     @Column(name="name")
     private String name;
-    @Column(name="categoryId")
-    private long categoryId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
     //дополнить
     @Column(name="square")
     private long square;
@@ -28,6 +27,7 @@ public class Property {
     @Column(name="timetoend")
     private Time time;
     //id текущего победителя
-    @Column(name="winnerId")
-    private long winnerId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="winner_id")
+    private User user;
 }

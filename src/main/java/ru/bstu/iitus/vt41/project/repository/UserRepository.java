@@ -11,4 +11,5 @@ import org.springframework.transaction.annotation.Transactional;
 //предописание методов
 public interface UserRepository extends JpaRepository<User,Long> {
     User findByName(@Param("nameToFind") String name);
+    //ВЫВЕСТИ ВСЕ СТАВКИ ПОЛЬЗОВАТЕЛЯ
 }

@@ -26,8 +26,9 @@ public class User {
     @Column(name="role")
     private String role;
     //текушие ставки (Set)
-    @OneToMany(fetch =FetchType.EAGER,  mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER,  mappedBy = "user")
     @JsonIgnore
+    //КАКАЯТО ЕЩЕ АННОТАЦИЯ
     private List<Property> properties;
     //@Column(name="currentBets")
     //private long[] bets;

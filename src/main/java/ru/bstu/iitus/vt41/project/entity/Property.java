@@ -29,5 +29,5 @@ public class Property {
     private Time time;
     //id текущего победителя
     @Column(name="winnerId")
-    private long winner;
+    private long winnerId;
 }

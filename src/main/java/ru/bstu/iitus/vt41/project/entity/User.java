@@ -26,4 +26,6 @@ public class User {
     @Column(name="role")
     private String role;
     //текушие ставки (Set)
+    //@Column(name="currentBets")
+    //private long[] bets;
 }

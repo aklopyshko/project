@@ -7,7 +7,7 @@ import ru.bstu.iitus.vt41.project.entity.Property;
 
 //недвижимость
 @Controller
-@RequestMapping("/property")
+@RequestMapping("/property/getprops")
 public class PropertyController {
     @RequestMapping(method = RequestMethod.GET)
     public Property getProperty() { return null;}

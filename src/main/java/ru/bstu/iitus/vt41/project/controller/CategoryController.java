@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 //категории недвижимости
 @Controller
-@RequestMapping("/category")
+@RequestMapping("/category/getcats")
 public class CategoryController {
 @RequestMapping(method = RequestMethod.GET)
     public String getCategories() { return null;}

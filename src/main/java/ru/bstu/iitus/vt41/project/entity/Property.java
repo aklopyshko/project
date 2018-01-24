@@ -16,6 +16,7 @@ public class Property {
     private long id;
     @Column(name="name")
     private String name;
+    //@ONETOONE?
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;

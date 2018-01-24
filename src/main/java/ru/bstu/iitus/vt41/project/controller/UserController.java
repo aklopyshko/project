@@ -7,4 +7,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     //метод гет для вывода всех ставок
     //метод для проверки роли пользователя
+    //post для добавления пользователя
 }
